@@ -85,7 +85,7 @@ logging.basicConfig(level=logging.INFO,
                     ])
 
 # --- CONFIG ---
-API_TOKEN = os.getenv("DERIV_API_TOKEN", "YUa7FW6khNWqwyW") # Use environment variable for security
+API_TOKEN = os.getenv("DERIV_API_TOKEN", "YUa7FW6khNWyW") # Use environment variable for security
 if API_TOKEN == "YOUR_API_TOKEN":
     logging.warning("API Token not set as environment variable. Using default.")
 
@@ -526,4 +526,5 @@ def start_model_trainer_process(queue: Queue):
         logging.critical(f"🔥🔥 CRITICAL ERROR in trainer process: {e}🔥🔥")
     
 if __name__ == "__main__":
+
     asyncio.run(run_bot())
